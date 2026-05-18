@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Typo</title>
+    <link rel="icon" href="img/typoiconremoved.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="top-bar">
+            <div class="file-controls">
+                <button class="nav-item" data-action="new" title="New Document">
+                    <i class="fas fa-plus"></i> <span class="hide-mobile">New</span>
+                </button>
+                <button class="nav-item" data-action="save" title="Save Document">
+                    <i class="fas fa-save"></i> <span class="hide-mobile">Save</span>
+                </button>
+                <div class="nav-item dropdown">
+                    <button class="dropdown-toggle">
+                        <i class="fas fa-file-export"></i> <span class="hide-mobile">Export</span> <i class="fas fa-chevron-down arrow-icon"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <button data-action="export-pdf"><i class="fas fa-file-pdf"></i> Export PDF</button>
+                        <button data-action="export-txt"><i class="fas fa-file-alt"></i> Export Text</button>
+                        <button data-action="export-docx"><i class="fas fa-file-word"></i> Export Word</button>
+                    </div>
+                </div>
+                <div class="history-controls">
+                    <button id="undoBtn" class="nav-item" title="Undo"><i class="fas fa-undo"></i></button>
+                    <button id="redoBtn" class="nav-item" title="Redo"><i class="fas fa-redo"></i></button>
+                </div>
+            </div>
+
+            <div class="document-info">
+                <input type="text" id="documentTitle" placeholder="Untitled Document">
+            </div>
+
+            <div class="utility-controls">
+                <button id="focusModeBtn" class="nav-item" title="Toggle Focus Mode"><i class="fas fa-expand"></i></button>
+                <button id="toggleSidebarBtn" class="nav-item" title="Open Sidebar"><i class="fas fa-folder"></i></button>
+            </div>
+        </header>
+
+        <div class="ribbon-container">
+            <div id="custom-toolbar">
+                </div>
+        </div>
+
+        <main class="workspace">
+            <div id="editor-container">
+                </div>
+            
+            <div class="document-management" id="sidebarDrawer">
+                <div class="sidebar-header">
+                    <h3>Documents</h3>
+                    <button id="closeSidebarBtn">✕</button>
+                </div>
+                <ul id="documentList"></ul>
+            </div>
+        </main>
+
+        <footer class="status-bar">
+            <div class="status-item" id="pageCount">Page: 1/1</div>
+            <div class="status-item" id="wordCount">0 words</div>
+            <div class="status-item" id="charCount">0 characters</div>
+            <div class="status-item">Typo v2.1.1</div>
+        </footer>
+    </div>
+
+    <div id="image-tools-overlay" class="image-floating-tools">
+        <button data-img-size="small">Small</button>
+        <button data-img-size="medium">Medium</button>
+        <button data-img-size="full">Full Width</button>
+        <div class="separator"></div>
+        <button data-img-align="left"><i class="fas fa-align-left"></i></button>
+        <button data-img-align="center"><i class="fas fa-align-center"></i></button>
+        <button data-img-align="right"><i class="fas fa-align-right"></i></button>
+        <div class="separator"></div>
+        <button id="deleteImageBtn" class="danger"><i class="fas fa-trash"></i></button>
+    </div>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
