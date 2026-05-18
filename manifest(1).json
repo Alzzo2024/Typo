@@ -1,0 +1,38 @@
+{
+  "background_color": "#101010",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "name": "Typo",
+  "orientation": "natural",
+  "scope": "/",
+  "short_name": "Typo",
+  "start_url": "/index.html",
+  "theme_color": "#101010",
+  "icons": [
+    {
+      "src": "https://alzzotypo.vercel.app/img/typoiconremoved.png",
+      "type": "image/png",
+      "sizes": "500x500",
+      "isSquare": true,
+      "isPng": true,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 500,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
+  "id": "Typo",
+  "description": "Typo is a modern, minimalist web-based word processor designed for clean and distraction-free writing. Built to mimic professional desktop applications like Microsoft Word, it offers a real A4 multi-page layout that automatically creates new pages as you type, giving you an accurate preview of your document's pagination.\n\nThe app features a high-contrast dark interface that keeps the focus entirely on your work, along with essential formatting tools, customized numeric font sizing, and distinct typography styles. Designed to be completely mobile-friendly, it shifts its toolbar seamlessly on smaller screens to ensure a comfortable typing experience over mobile keyboards. With live word counters, an immersive Focus Mode, responsive image formatting tools, and versatile export options (PDF, Word, and Text), Typo Pro combines professional functionality with an elegant, streamlined workspace.",
+  "lang": "en",
+  "display_override": [
+    "browser",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "productivity",
+    "utilities"
+  ]
+}
